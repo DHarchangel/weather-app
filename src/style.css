@@ -27,7 +27,9 @@ body {
 }
 .search-btn {
   width: 80px;
-  background-color: rgb(90, 100, 247);
+  
+  margin-left: 5px;
+  background-color: #5a64f7;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -36,6 +38,7 @@ body {
   transition: all 200ms ease;
 }
 .location {
+  margin-left: 5px;
   width: 140px;
   background-color: rgb(14, 187, 23);
   color: #fff;
