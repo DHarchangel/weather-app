@@ -2,13 +2,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-bottom: 10px;
   margin: auto;
 }
 .card {
-  width: 600px;
+  margin: 0 auto;
   height: 300px;
   border: 2px solid rgb(37 39 89 / 8%);
   border-radius: 10px;
@@ -20,7 +18,7 @@ body {
   padding: 20px;
 }
 #search-input {
-  width: 300px;
+  width: 200px;
   height: 30px;
   border-radius: 5px;
   padding-left: 10px;
