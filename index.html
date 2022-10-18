@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="input">
+          <input
+            type="text"
+            placeholder="Enter a City ..."
+            autocomplete="off"
+            autofocus
+            id="search-input"
+          />
+          <button class="search-btn">Search</button>
+          <button class="location">Current Location</button>
+        </div>
+        <div class="city">
+          <h1 class="city-name">City Name.</h1>
+          <ul class="city-info">
+            <li class="date"></li>
+            <li class="climate">Weather Description</li>
+            <li class="position"></li>
+          </ul>
+        </div>
+        <div class="footer">
+          <div class="temp">
+            <img
+              class="image"
+              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+              alt="Cloudy Icon"
+            />
+            <div class="float-left">
+              <span class="temperature">-</span><span class="units">℃ </span>
+            </div>
+            -
+          </div>
+          <div class="temp-info">
+            <ul>
+              <li>Precipitation: 0%</li>
+              <li>humidity: 0<span class="humidity"></span> %</li>
+              <li>Wind: <span class="wind">0</span>km/h</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/script.js"></script>
+  </body>
+</html>
