@@ -60,7 +60,7 @@ let day = days[now.getDay()];
 let hour = now.getHours();
 let minuits = now.getMinutes();
 let time = document.querySelector('.date');
-time.innerHTML = `${day}, ${hour}<strong>:</strong>${minuits}`;
+time.innerHTML = `Last Updated: ${day}, ${hour}<strong>:</strong>${minuits}`;
 
 let search = document.getElementById('search-input');
 let cityName = document.querySelector('.city-name');
@@ -68,7 +68,19 @@ let searchButton = document.querySelector('.search-btn');
 let currentLocation = document.querySelector('.location');
 
 searchButton.addEventListener('click', searchCity);
+
+/*
+// Used to find current location of the user
 currentLocation.addEventListener('click', findLocation);
+function findLocation() {
+    navigator.geolocation.getCurrentPosition(showposition);
+}
+
+function showposition(position) {
+    let li = document.querySelector('.position');
+    li.innerHTML = `Latitude: ${Math.round(position.coords.latitude)}, Longitude: ${Math.round(position.coords.longitude)}`;
+}
+*/
 
 function searchCity(event) {
     event.preventDefault();
@@ -83,17 +95,9 @@ function searchCity(event) {
 
     axios.get(`${apiUrl}&appid=${apiKey}`)
         .then(showTemperature);
-
 }
 
-function findLocation() {
-    navigator.geolocation.getCurrentPosition(showposition);
-}
 
-function showposition(position) {
-    let li = document.querySelector('.position');
-    li.innerHTML = `Latitude: ${Math.round(position.coords.latitude)}, Longitude: ${Math.round(position.coords.longitude)}`
-}
 
 let temperature = document.querySelector('.temperature');
 let humidity = document.querySelector('.humidity');
