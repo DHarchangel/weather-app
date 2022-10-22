@@ -95,6 +95,7 @@ li::first-letter {
   text-transform: capitalize;
 }
 .footer {
+  width: 100%;
   margin-top: 30px;
   display: flex;
   flex-direction: row;
@@ -107,6 +108,7 @@ li::first-letter {
   margin: 10px;
 }
 .temp-info {
+  margin-left: 10px;
   flex: 5;
   width: 40%;
   margin-top: 20px;
