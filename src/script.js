@@ -1,66 +1,3 @@
-/*
-let weather = {
-    paris: {
-        temp: 19.7,
-        humidity: 80
-    },
-    tokyo: {
-        temp: 17.3,
-        humidity: 50
-    },
-    lisbon: {
-        temp: 30.2,
-        humidity: 20
-    },
-    "san francisco": {
-        temp: 20.9,
-        humidity: 100
-    },
-    oslo: {
-        temp: -5,
-        humidity: 20
-    }
-};
-
-
-
-// write your code here
-
-let city = prompt('Enter a City');
-let fahrenheit;
-if (city === 'paris') {
-    fahrenheit = Math.floor((weather.paris.temp * (9 / 5)) + 33.8);
-    alert(`⛅ 
-    It is currently ${weather.paris.temp}°C(${fahrenheit}°F) in  ${city} with a humidity of ${weather.paris.humidity} %`)
-} else if (city === 'tokyo') {
-    fahrenheit = Math.floor((weather.tokyo.temp * (9 / 5)) + 33.8);
-    alert(`⛅ 
-    It is currently ${weather.tokyo.temp}°C(${fahrenheit}°F) in  ${city} with a humidity of ${weather.tokyo.humidity} %`)
-} else if (city === 'lisbon') {
-    fahrenheit = Math.floor((weather.lisbon.temp * (9 / 5)) + 33.8);
-    alert(`⛅ 
-    It is currently ${weather.lisbon.temp}°C(${fahrenheit}°F) in  ${city} with a humidity of ${weather.lisbon.humidity} %`)
-} else if (city === "san francisco") {
-    fahrenheit = Math.floor((weather["san francisco"].temp * (9 / 5)) + 33.8);
-    alert(`⛅ 
-    It is currently ${weather["san francisco"].temp}°C(${fahrenheit}°F) in  ${city} with a humidity of ${weather["san francisco"].humidity} %`)
-} else if (city === 'oslo') {
-    fahrenheit = Math.floor((weather.oslo.temp * (9 / 5)) + 33.8);
-    alert(`⛅ 
-    It is currently ${weather.oslo.temp}°C(${fahrenheit}°F) in  ${city} with a humidity of ${weather.oslo.humidity} %`)
-
-} else {
-    alert(`Sorry, we don't know the weather for this city, try going to https://www.google.com/search?q=weather+${city}"`)
-};
-*/
-let now = new Date();
-let date = now.getDate();
-let days = ["Sun", "Mon", "Tue", "Wed", "Thur", "Fri", "Sat"];
-let day = days[now.getDay()];
-let hour = now.getHours();
-let minuits = now.getMinutes();
-let time = document.querySelector('.date');
-time.innerHTML = `Last Updated: ${day}, ${hour}<strong>:</strong>${minuits}`;
 
 let search = document.getElementById('search-input');
 let cityName = document.querySelector('.city-name');
@@ -104,10 +41,26 @@ let humidity = document.querySelector('.humidity');
 let wind = document.querySelector('.wind');
 let climate = document.querySelector('.climate');
 let image = document.querySelector('.image');
-
+function formatDate(timestamp) {
+    let date = new Date(timestamp);
+    let hours = date.getHours();
+    if (days < 10) { days = `0${days}`; }
+    let minutes = date.getMinutes();
+    if (minutes < 10) { minutes = `0${minutes}`; }
+    let days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    let day = date.getDate();
+    return `${days[day]} ${hours}:${minutes}`;
+}
 
 function showTemperature(response) {
-    console.log(response);
+    let temperature = document.querySelector('.temperature');
+    let humidity = document.querySelector('.humidity');
+    let wind = document.querySelector('.wind');
+    let climate = document.querySelector('.climate');
+    let image = document.querySelector('.image');
+    let dateElement = document.querySelector('#date');
+
+    dateElement.innerHTML = formatDate(response.data.dt * 1000);
     temperature.innerHTML = Math.round(response.data.main.temp);
     humidity.innerHTML = Math.round(response.data.main.humidity);
     wind.innerHTML = response.data.wind.speed;

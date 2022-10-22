@@ -12,20 +12,22 @@
     <div class="container">
       <div class="card">
         <div class="input">
-          <input
-            type="text"
+          <form id="search-form" >
+            <input
+            type="search"
             placeholder="Enter a City ..."
             autocomplete="off"
             autofocus
             id="search-input"
           />
-          <button class="search-btn">Search</button>
+          <input type="submit" value="Search" class="search-btn">
+          </form>
           
         </div>
         <div class="city">
-          <h1 class="city-name">City Name.</h1>
+          <h1 class="city-name">City Name</h1>
           <ul class="city-info">
-            <li class="date"></li>
+            <li>Last Updated at <span id="date"></span></li>
             <li class="climate">Weather Description</li>
             <li class="position"></li>
           </ul>
@@ -38,7 +40,7 @@
               alt="Cloudy Icon"
             />
             <div class="float-left">
-              <span class="temperature">-</span><span class="units">℃ </span>
+              <span class="temperature"></span><span class="units"><span class="celsius">℃</span><span class="fahrenheit">|℉</span></>
             </div>
             
           </div>

@@ -4,15 +4,13 @@ body {
 .container {
   display: block;
   margin-bottom: 10px;
-  max-width: 600px;
-  margin: 0 auto;
 }
 .card {
-  
-  margin: 0 auto;
-  height: 300px;
-  border: 2px solid rgb(37 39 89 / 8%);
+  max-width: 600px;
+  margin: 30px auto;
+  border: 2px solid #dadde1;
   border-radius: 10px;
+  padding: 20px;
 }
 .input {
   display: flex;
@@ -65,14 +63,13 @@ body {
   padding: 5px;
 }
 .city {
-  font-family: Arial, Helvetica, sans-serif;
-  height: 50px;
+  font-weight: 100;
   margin-left: 20px;
   color: #777;
 }
 h1 {
-  font-size: 18px;
-  margin: 5px 0;
+  font-size: 24px;
+  line-height: 28px;
 }
 ul {
   margin: 0;
@@ -85,8 +82,9 @@ a {
 }
 li {
   list-style: none;
-  margin-top: 5px;
+  color: rgb(133, 133, 133);
 }
+li::first-letter{text-transform: capitalize;}
 .footer {
   margin-top: 30px;
   display: flex;
@@ -117,6 +115,8 @@ li {
   position: absolute;
   margin-top: 10px;
   margin-left: 5px;
-  color: #1a64d6;
   font-weight: 600;
+}
+.celsius {
+  color: #1a64d6;
 }
