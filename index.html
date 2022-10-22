@@ -11,25 +11,23 @@
   <body>
     <div class="container">
       <div class="card">
-        
-          <form id="search-form" >
-            <div class="input">
+        <form id="search-form">
+          <div class="input">
             <input
-            type="search"
-            placeholder="City ..."
-            autocomplete="off"
-            autofocus
-            id="search-input"
-          />
-          <input type="submit" value="Search" class="search-btn">
+              type="search"
+              placeholder="City ..."
+              autocomplete="off"
+              autofocus
+              id="search-input"
+            />
+            <input type="submit" value="Search" class="search-btn" />
           </div>
-          </form>
-          
-        
+        </form>
+
         <div class="city">
-          <h1 class="city-name">City Name</h1>
+          <h1 class="city-name"></h1>
           <ul class="city-info">
-            <li>Last Updated at <span id="date"></span></li>
+            <li>Last Updated at <strong>:</strong> <span id="date"></span></li>
             <li class="climate">Weather Description</li>
             <li class="position"></li>
           </ul>
@@ -42,22 +40,28 @@
               alt="Cloudy Icon"
             />
             <div class="float-left">
-              <span class="temperature"></span><span class="units"><span class="celsius">℃</span><span class="fahrenheit">|℉</span></>
+              <span class="temperature"></span
+              ><span class="units">
+                <a href="#" id="celsius-link"> ℃</a> | <a href="#" id="fahrenheit-link">℉</a> 
+              </span>
             </div>
-            
           </div>
           <div class="temp-info">
             <ul>
-              <li>Precipitation: 0%</li>
               <li>humidity: 0<span class="humidity"></span></li>
               <li>Wind: <span class="wind">0</span>km/h</li>
             </ul>
           </div>
         </div>
-        <div class="footer"><a href="https://github.com/DHarchangel/weather-app">Open Source Code </a> By Nweke Chidiebele, Oct 2022</div>
-    </div>
+        <div class="footer">
+          <a href="https://github.com/DHarchangel/weather-app"
+            >Open Source Code
+          </a>
+          By Nweke Chidiebele, Oct 2022
+        </div>
       </div>
-      
+    </div>
+
     <script src="src/script.js"></script>
   </body>
 </html>
