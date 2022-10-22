@@ -30,7 +30,6 @@ body {
 .search-btn {
   width: 20%;
   padding: 10px 20px;
-  margin-left: 5px;
   background-color: #5a64f7;
   color: #fff;
   border: none;
@@ -120,7 +119,6 @@ li::first-letter {
 .temperature {
   position: relative;
   font-size: 70px;
-  margin-left: 20px;
   color: #ec6e4c;
 }
 .units {
