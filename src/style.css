@@ -1,5 +1,5 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
 }
 .container {
   display: block;
@@ -19,16 +19,15 @@ body {
   padding: 20px;
 }
 #search-input {
-  width: 60%;
-  height: 30px;
+  width: 70%;
   border-radius: 5px;
-  padding-left: 10px;
+  padding: 5px 10px;
   font-size: 16px;
   font-weight: bold;
   padding: 10px;
 }
 .search-btn {
-  width: 30%;
+  width: 20%;
   padding: 10px 20px;
   margin-left: 5px;
   background-color: #5a64f7;
