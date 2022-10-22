@@ -88,7 +88,7 @@ a {
 }
 li {
   list-style: none;
-  color: rgb(133, 133, 133);
+  color: #999);
   margin: 10px 0;
 }
 li::first-letter {
