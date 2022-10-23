@@ -139,3 +139,31 @@ li::first-letter {
 .celsius {
   color: #1a64d6;
 }
+
+
+/* Forcst section */
+.forcast{
+  display: grid;
+  grid-template-columns: auto auto auto auto auto auto;
+  justify-content: space-between;
+}
+.forcast-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.forcast-date{
+  font-size: 16px;
+  opacity: 0.5;
+}
+.forcast-temp{
+  font-size: 13px;
+}
+.minTemp{
+  opacity: 0.5;
+}
+.degree{
+  color: #ec6e4c;
+  opacity: 1 !important;
+}
