@@ -3,6 +3,7 @@ body {
 }
 .container {
   display: block;
+  margin: 0 auto;
   margin-bottom: 10px;
 }
 .card {
@@ -13,6 +14,7 @@ body {
   padding: 20px;
 }
 .input {
+  opacity: 0.6;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -66,7 +68,6 @@ body {
 .city {
   font-weight: 100;
   margin-left: 20px;
-  color: #777;
 }
 h1 {
   font-size: 24px;
@@ -88,35 +89,35 @@ a {
 }
 li {
   list-style: none;
-  color: #999;
+  opacity: 0.6;
   margin: 10px 0;
 }
 li::first-letter {
   text-transform: capitalize;
 }
 .footer {
-  width: 100%;
-  margin-top: 30px;
-  display: flex;
-  flex-direction: row;
+  margin: 10px 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
 }
 .temp {
   display: flex;
   flex-direction: row;
-  width: 60%;
+  align-items: center;
   margin: 10px;
 }
 .temp-info {
   margin-left: 10px;
-  width: 40%;
-  margin-top: 20px;
+  width: 100%;
+  margin-top: 10px;
 }
 .temp-info li {
   font-size: 16px;
   line-height: 20px;
   font-weight: 500;
   margin-left: 20px;
-  color: #999;
+  color: rgb(116, 114, 114);
 }
 .temperature {
   position: relative;
@@ -139,29 +140,33 @@ li::first-letter {
 .celsius {
   color: #1a64d6;
 }
+.copyRight{
+  text-align: center;
+}
 
 
 /* Forcst section */
-.forcast{
+.weather-forecast{
   display: grid;
   grid-template-columns: auto auto auto auto auto auto;
   justify-content: space-between;
+  
 }
-.forcast-wrapper{
+.forecast-wrapper{
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
-.forcast-date{
+.forecast-date{
   font-size: 16px;
-  opacity: 0.5;
+  opacity: 0.6;
 }
-.forcast-temp{
+.forecast-temp{
   font-size: 13px;
 }
 .minTemp{
-  opacity: 0.5;
+  opacity: 0.6;
 }
 .degree{
   color: #ec6e4c;
