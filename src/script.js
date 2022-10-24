@@ -105,10 +105,10 @@ celciusLink.addEventListener('click', showCelciusTemp);
 
 // Forecast
 function formatDay(timestamp) {
-    let date = new Date(timestamp);
+    let date = new Date(timestamp * 1000);
     let days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat'];
-    let day = days[date.getDay()];
-    return day
+    let day = date.getDay();
+    return days[day]
 }
 
 function displayForecast(response) {
